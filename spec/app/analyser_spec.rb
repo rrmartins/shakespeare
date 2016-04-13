@@ -17,5 +17,20 @@ describe Analyser do
         expect(analyser.class).to eq Analyser
       end
     end
+
+    context ".analyze_macbeth" do
+      context "Speaker Bob and 2 lines" do
+        before(:each) do
+          @xml = "<PLAY><SPEECH><SPEAKER>Bob</SPEAKER>"
+          @xml += "<LINE>Hello</LINE><LINE>Bye</LINE></SPEECH></PLAY>"
+        end
+
+        it "should return speaker Bob and 2 lines" do
+          expect(analyser.analyze_macbeth).to eq "2 Bob"
+        end
+      end
+
+      
+    end
   end
 end
