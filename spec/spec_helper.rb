@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'nokogiri'
+require 'byebug'
+require './app/analyser.rb'
 
 RSpec.configure do |config|
   config.order = :random
